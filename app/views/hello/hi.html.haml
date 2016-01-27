@@ -2,3 +2,21 @@
 
 %p
   Hello from this demo rails app. If you can see this text, then your application is running correctly - congratulations!
+
+%h3 Comments
+
+= simple_form_for Comment.new, url: hi_comment_path do |f|
+  = f.input :title
+  = f.input :body
+
+  = f.button :submit
+
+%ul.comments
+- @comments.each do |comment|
+  %li
+    %p.title
+      = comment.title
+    %p.body
+      = raw Kramdown::Document.new(comment.body).to_html
+
+= paginate @comments

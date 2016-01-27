@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'hello#hi'
 
-  get 'hi' => 'hello#hi'
+  get '/hi' => 'hello#hi'
+  post 'hi/comments' => 'hello#comment', as: :hi_comment
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

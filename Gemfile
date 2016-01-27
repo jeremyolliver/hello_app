@@ -27,8 +27,11 @@ gem 'haml-rails' # Intended view templates
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Puma as the app server
-gem 'puma'
+gem 'puma'     # Use Puma as the app server
+gem 'kramdown' # Markdown parser
+gem 'kaminari'
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
